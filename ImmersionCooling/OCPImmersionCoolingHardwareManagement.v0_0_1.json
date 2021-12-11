@@ -126,7 +126,7 @@
       "MinCount": 3,
       "PropertyRequirements": {
         "Name": {
-          "Comparison": "AllOf",
+          "Comparison": "OneOf",
           "Values": [
             "DLQ Supply Temperature Celsius",
             "DLQ Return Temperature Celsius",            
@@ -134,6 +134,58 @@
             "DLQ Level %",
             "DLQ Quality %"
           ]
+        },
+        "Description": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
+        },
+        "Implementation": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
+        },
+        "Location": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
+        },
+        "Reading": {
+          "ReadRequirement": "Mandatory",
+          "WriteRequirement": "None"
+        },
+        "ReadingTime": {
+          "ReadRequirement": "Mandatory",
+          "WriteRequirement": "None"
+        },
+        "ReadingType": {
+          "ReadRequirement": "Mandatory",
+          "WriteRequirement": "None",
+          "Comparison": "OneOf",
+          "Values": [
+            "Temperature",
+            "Power",            
+            "PressurekPa",
+            "LiquidFlow",
+            "Percent"
+          ]
+        },
+        "ReadingUnits": {
+          "ReadRequirement": "Mandatory",
+          "WriteRequirement": "None",
+          "Comparison": "OneOf",
+          "Values": [
+            "Cel",
+            "W",            
+            "kPa",
+            "L/s",
+            "%"
+          ]
+        },
+        "Status": {
+          "ReadRequirement": "Mandatory",
+          "WriteRequirement": "None"
+        },
+        "Thresholds": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
         }        
       }
     },                        
