@@ -121,23 +121,26 @@
     },                
     "Sensor": {
       "MinVersion": "1.5.0",
-      "Purpose": "Required Temperature Sensors",
+      "Purpose": "Required DLQ Sensors",
       "ReadRequirement": "Mandatory",
-      "MinCount": 2,
+      "MinCount": 3,
       "PropertyRequirements": {
         "Name": {
-          "Comparison": "AnyOf",
+          "Comparison": "AllOf",
           "Values": [
-            "Air temperature, In",
-            "Air temperature, Out"
+            "DLQ Supply Temperature Celsius",
+            "DLQ Return Temperature Celsius",            
+            "DLQ Power Input Watts",
+            "DLQ Level %",
+            "DLQ Quality %"
           ]
-        }
+        }        
       }
-    },
+    },                        
     "SensorCollection": {
       "PropertyRequirements": {
         "Members": {
-          "MinCount": 1
+          "MinCount": 2
         }
       }
     },
@@ -197,6 +200,46 @@
     },
     "Circuit": {
       "MinVersion": "1.4.0"
+    },
+    "EnvironmentMetrics": {
+      "MinVersion": "1.2.0",
+      "PropertyRequirements": {
+        "PowerLimitsWatts": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
+        },
+        "PowerLoadPercent": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
+        },
+        "PowerWatts": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
+        },
+        "TemperatureCelsius": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
+        }
+      }
+    },
+    "ThermalMetrics": {
+      "MinVersion": "1.0.0",
+      "PropertyRequirements": {
+        "TemperatureReadingsCelsius": {
+          "ReadRequirement": "Recommended",
+          "WriteRequirement": "Recommended"
+        }
+      }
+    },
+    "Pump": {
+      "MinVersion": "1.0.0"
+    },
+    "PumpCollection": {
+      "PropertyRequirements": {
+        "Members": {
+          "MinCount": 0
+        }
+      }
     },
     "ServiceRoot": {
       "MinVersion": "1.12.0"
