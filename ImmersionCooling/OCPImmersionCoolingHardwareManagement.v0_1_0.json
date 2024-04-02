@@ -17,6 +17,7 @@
         "/redfish/v1/Chassis/{ChassisId}/Controls/{ControlId}",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/Controls/{ControlId}",
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/Controls/{ControlId}",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/Controls/{ControlId}",
         "/redfish/v1/CoolingEquipment/CoolingLoops/{CoolingUnitId}/Controls/{ControlId}"
       ],
       "Purpose": "To control the Cooling Unit resource",
@@ -126,6 +127,7 @@
         "/redfish/v1/Chassis/{ChassisId}/Controls/{ControlId}",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/Controls/{ControlId}",
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/Controls/{ControlId}",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/Controls/{ControlId}",
         "/redfish/v1/CoolingEquipment/CoolingLoops/{CoolingUnitId}/Controls/{ControlId}"
       ],
       "PropertyRequirements": {
@@ -139,6 +141,7 @@
       "URIs": [
         "/redfish/v1/Chassis/{ChassisId}/Sensors/{SensorId}",
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/Sensors/{SensorId}",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/Sensors/{SensorId}",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/Sensors/{SensorId}",
         "/redfish/v1/CoolingEquipment/CoolingLoops/{CoolingUnitId}/Sensors/{SensorId}"
       ],
@@ -214,6 +217,7 @@
       "URIs": [
         "/redfish/v1/Chassis/{ChassisId}/Sensors/{SensorId}",
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/Sensors/{SensorId}",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/Sensors/{SensorId}",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/Sensors/{SensorId}",
         "/redfish/v1/CoolingEquipment/CoolingLoops/{CoolingUnitId}/Sensors/{SensorId}"
       ],
@@ -276,6 +280,8 @@
       "URIs": [
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/PrimaryLoopConnections",
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/SecondaryLoopConnections",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/PrimaryLoopConnections",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/SecondaryLoopConnections",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/PrimaryLoopConnections",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/SecondaryLoopConnections"
       ]
@@ -284,6 +290,8 @@
       "URIs": [
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/PrimaryLoopConnections",
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/SecondaryLoopConnections",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/PrimaryLoopConnections",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/SecondaryLoopConnections",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/PrimaryLoopConnections",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/SecondaryLoopConnections"
       ],
@@ -324,6 +332,7 @@
       "MinVersion": "1.4.0",
       "URIs": [
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/{CircuitId}",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/{CircuitId}",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/{CircuitId}"
       ]
     },
@@ -334,6 +343,7 @@
         "/redfish/v1/Facilities/{FacilityId}/EnvironmentMetrics",
         "/redfish/v1/Facilities/{FacilityId}/AmbientMetrics",
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/EnvironmentMetrics",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/EnvironmentMetrics",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/EnvironmentMetrics"
       ],
       "PropertyRequirements": {
@@ -359,7 +369,8 @@
       "MinVersion": "1.0.0",
       "URIs": [
         "/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem/ThermalMetrics",
-        "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/ThermalMetrics",        
+        "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/ThermalMetrics",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/ThermalMetrics",        
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/ThermalMetrics"
       ],
       "PropertyRequirements": {
@@ -373,12 +384,14 @@
       "MinVersion": "1.0.0",
       "URIs": [
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/Pumps/{PumpId}",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/Pumps/{PumpId}",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/Pumps/{PumpId}"
       ]
     },
     "PumpCollection": {
       "URIs": [
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/Pumps/{PumpId}",
+        "/redfish/v1/CoolingEquipment/CDUs/{CoolingUnitId}/Pumps/{PumpId}",
         "/redfish/v1/CoolingEquipment/ImmersionUnits/{CoolingUnitId}/Pumps/{PumpId}"
       ],
       "PropertyRequirements": {
