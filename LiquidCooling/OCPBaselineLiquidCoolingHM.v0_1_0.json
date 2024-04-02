@@ -1,0 +1,242 @@
+{
+    "SchemaDefinition": "RedfishInteroperabilityProfile.v1_7_0",
+    "ProfileName": "OCP Baseline Liquid Cooling Infrastructure Unit Management",
+    "ProfileVersion": "0.1.0",
+    "Purpose": "Specifies the OCP management baseline requirements for the Redfish interface on OCP liquid cooling infrastructure.",
+    "OwningEntity": "Open Compute Project",
+    "ContactInfo": "michael.b.jones@vertiv.com",
+    "RequiredProfiles": {},
+    "Resources": {
+        "Chassis": {          
+            "URIs": [
+                "/redfish/v1/Chassis/{ChassisId}"
+            ],
+            "PropertyRequirements": {
+                "ChassisType": {},
+                "EnvironmentMetrics": {},
+                "Links": {
+                    "PropertyRequirements": {
+                        "CoolingUnits": {},
+                        "ManagedBy": {}
+                    }
+                },
+                "Manufacturer": {},
+                "Model": {},
+                "PartNumber": {},
+                "PowerState": {},
+                "Sensors": {},
+                "SerialNumber": {},
+                "Status": {
+                    "PropertyRequirements": {
+                        "Health": {},
+                        "State": {}
+                    }
+                },
+                "ThermalSubsystem": {
+                    "ReadRequirement": "Recommended"
+                },
+                "UUID": {},
+                "Version": {}
+            }
+        },
+        "EnvironmentMetrics": {
+            "URIs": [
+                "/redfish/v1/Chassis/{ChassisId}/EnvironmentMetrics"
+            ],
+            "PropertyRequirements": {
+                "EnergykWh": {},
+                "HumidityPercent": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "PowerWatts": {},
+                "TemperatureCelsius": {
+                    "ReadRequirement": "IfImplemented"
+                }
+            }
+        },
+        "ThermalSubsystem": {
+            "ReadRequirement": "Recommended",
+            "URIs": [
+                "/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem"
+            ],
+            "PropertyRequirements": {
+                "FanRedundancy": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "Fans": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "Status": {
+                    "PropertyRequirements": {
+                        "Health": {},
+                        "State": {}
+                    }
+                },
+                "ThermalMetrics": {}
+            }
+        },
+        "ThermalMetrics": { 
+            "ReadRequirement": "Recommended",
+            "URIs": [
+                "/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem/ThermalMetrics"
+            ],
+            "PropertyRequirements": {
+                "TemperatureReadingsCelsius": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "TemperatureSummaryCelsius": {
+                    "ReadRequirement": "IfImplemented",
+                    "PropertyRequirements": {
+                        "Ambient": {
+                            "ReadRequirement": "IfImplemented"
+                        },
+                        "Internal": {
+                            "ReadRequirement": "IfImplemented"
+                        }
+                    }
+                }
+            }
+        },
+        "Fan": {
+            "ReadRequirement": "IfImplemented",
+            "URIs": [
+                "/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem/Fans/{FanId}"
+            ],
+            "PropertyRequirements": {
+                "Location": {
+                    "PropertyRequirements": {
+                        "PartLocation": {
+                            "PropertyRequirements": {
+                                "LocationOrdinalValue": {},
+                                "LocationType": {},
+                                "Orientation": {},
+                                "Reference": {},
+                                "ServiceLabel": {}
+                            }
+                        }
+                    }
+                },
+                "SpeedPercent": {},
+                "Status": {
+                    "PropertyRequirements": {
+                        "Health": {},
+                        "State": {}
+                    }
+                }
+            }
+        },
+        "ThermalEquipment": {
+            "URIs": [
+                "/redfish/v1/ThermalEquipment"
+            ],
+            "PropertyRequirements": {}
+        },
+        "CoolingUnit": {
+            "URIs": [
+            ],
+            "PropertyRequirements": {
+                "Coolant": {
+                    "PropertyRequirements": {
+                        "CoolantType": {},
+                        "DensityKgPerCubicMeter": {},
+                        "SpecificHeatkJoulesPerKgK": {}
+                    }
+                },
+                "CoolantConnectorRedundancy": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "CoolingCapacityWatts": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "EnvironmentMetrics": {},
+                "EquipmentType": {
+                },
+                "FilterRedundancy": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "Filters": {},
+                "FirmwareVersion": {},
+                "LeakDetection": {},
+                "Links": {
+                    "PropertyRequirements": {
+                        "Chassis": {},
+                        "ManagedBy": {
+                            "ReadRequirement": "IfImplemented"
+                        }
+                    }
+                },
+                "Manufacturer": {},
+                "Model": {},
+                "PartNumber": {},
+                "PrimaryCoolantConnectors": {},
+                "ProductionDate": {},
+                "PumpRedundancy": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "Pumps": {},
+                "SecondaryCoolantConnectors": {},
+                "SerialNumber": {},
+                "Status": {
+                    "PropertyRequirements": {
+                        "Health": {},
+                        "State": {}
+                    }
+                },
+                "UUID": {},
+                "Version": {}
+            }
+        },
+        "LeakDetection": {
+            "URIs": [
+            ],
+            "PropertyRequirements": {
+                "LeakDetectorGroups": {
+                    "PropertyRequirements": {
+                        "Detectors": {},
+                        "GroupName": {
+                            "ReadRequirement": "Recommended"
+                        },
+                        "HumidityPercent": {}
+                    }
+                },
+                "LeakDetectors": {
+                    "ReadRequirement": "Recommended"
+                },
+                "Status": {
+                    "PropertyRequirements": {
+                        "Health": {},
+                        "State": {}
+                    }
+                }
+            }
+        },
+        "LeakDetector": {
+            "URIs": [
+            ],
+            "PropertyRequirements": {
+                "DetectorState": {},
+                "LeakDetectorType": {},
+                "Location": {
+                    "ReadRequirement": "Recommended",
+                    "PropertyRequirements": {                        
+                        "PartLocation": {
+                            "PropertyRequirements": {
+                                "LocationOrdinalValue": {"ReadRequirement": "Recommended"},
+                                "LocationType": {"ReadRequirement": "Recommended"},
+                                "Orientation": {"ReadRequirement": "Recommended"},
+                                "Reference": {"ReadRequirement": "Recommended"},
+                                "ServiceLabel": {"ReadRequirement": "Recommended"}
+                            }
+                        }
+                    }
+                },
+                "Status": {
+                    "PropertyRequirements": {
+                        "Health": {},
+                        "State": {}
+                    }
+                }
+            }
+        }
+    }
+}

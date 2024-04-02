@@ -6,8 +6,8 @@
   "OwningEntity": "Open Compute Project",
   "ContactInfo": "mick.jones@ocproject.net",
   "RequiredProfiles": {
-    "OCPBaselineHardwareManagement": {
-      "MinVersion": "1.0.1"
+    "OCPBaselineLiquidCoolingHM": {
+      "MinVersion": "0.1.0"
   }
   },
   "Resources": {
