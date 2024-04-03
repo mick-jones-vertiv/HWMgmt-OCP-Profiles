@@ -36,8 +36,8 @@
                 "ThermalSubsystem": {
                     "ReadRequirement": "Recommended"
                 },
-                "UUID": {"ReadRequirement": "IfImplemented"},
-                "Version": {"ReadRequirement": "IfImplemented"}
+                "UUID": {"ReadRequirement": "Recommended"},
+                "Version": {"ReadRequirement": "Recommended"}
             }
         },
         "EnvironmentMetrics": {
@@ -45,13 +45,17 @@
                 "/redfish/v1/Chassis/{ChassisId}/EnvironmentMetrics"
             ],
             "PropertyRequirements": {
-                "EnergykWh": {},
-                "HumidityPercent": {
-                    "ReadRequirement": "IfImplemented"
+                "EnergykWh": {
+                    "ReadRequirement": "Recommended"
                 },
-                "PowerWatts": {},
-                "TemperatureCelsius": {
-                    "ReadRequirement": "IfImplemented"
+                "PowerWatts": {
+                    "ReadRequirement": "Recommended"
+                },
+                "FWSCoolantSupplyTemp": {
+                    "ReadRequirement": "Mandatory"
+                },
+                "FWSCoolantReturnTemp": {
+                    "ReadRequirement": "Mandatory"
                 }
             }
         },
@@ -61,12 +65,6 @@
                 "/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem"
             ],
             "PropertyRequirements": {
-                "FanRedundancy": {
-                    "ReadRequirement": "IfImplemented"
-                },
-                "Fans": {
-                    "ReadRequirement": "IfImplemented"
-                },
                 "Status": {
                     "PropertyRequirements": {
                         "Health": {},
@@ -94,34 +92,6 @@
                         "Internal": {
                             "ReadRequirement": "IfImplemented"
                         }
-                    }
-                }
-            }
-        },
-        "Fan": {
-            "ReadRequirement": "IfImplemented",
-            "URIs": [
-                "/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem/Fans/{FanId}"
-            ],
-            "PropertyRequirements": {
-                "Location": {
-                    "PropertyRequirements": {
-                        "PartLocation": {
-                            "PropertyRequirements": {
-                                "LocationOrdinalValue": {},
-                                "LocationType": {},
-                                "Orientation": {},
-                                "Reference": {},
-                                "ServiceLabel": {}
-                            }
-                        }
-                    }
-                },
-                "SpeedPercent": {},
-                "Status": {
-                    "PropertyRequirements": {
-                        "Health": {},
-                        "State": {}
                     }
                 }
             }
