@@ -22,7 +22,8 @@
                 },
                 "Manufacturer": {},
                 "Model": {},
-                "PartNumber": {},
+                "Name": {},
+                "PartNumber": {"ReadRequirement": "IfImplemented"},
                 "PowerState": {},
                 "Sensors": {},
                 "SerialNumber": {},
@@ -35,8 +36,8 @@
                 "ThermalSubsystem": {
                     "ReadRequirement": "Recommended"
                 },
-                "UUID": {},
-                "Version": {}
+                "UUID": {"ReadRequirement": "IfImplemented"},
+                "Version": {"ReadRequirement": "IfImplemented"}
             }
         },
         "EnvironmentMetrics": {
@@ -155,7 +156,7 @@
                     "ReadRequirement": "IfImplemented"
                 },
                 "Filters": {},
-                "FirmwareVersion": {},
+                "FirmwareVersion": {"ReadRequirement": "IfImplemented"},
                 "LeakDetection": {},
                 "Links": {
                     "PropertyRequirements": {
@@ -167,9 +168,10 @@
                 },
                 "Manufacturer": {},
                 "Model": {},
+                "Name": {},
                 "PartNumber": {},
                 "PrimaryCoolantConnectors": {},
-                "ProductionDate": {},
+                "ProductionDate": {"ReadRequirement": "IfImplemented"},
                 "PumpRedundancy": {
                     "ReadRequirement": "IfImplemented"
                 },
@@ -182,8 +184,11 @@
                         "State": {}
                     }
                 },
-                "UUID": {},
-                "Version": {}
+                "UUID": {"ReadRequirement": "IfImplemented"},
+                "Version": {"ReadRequirement": "IfImplemented"},
+                "AssetTag": {},
+                "CountryOfOrigin": {},
+                "UserLabel": {}
             }
         },
         "LeakDetection": {
