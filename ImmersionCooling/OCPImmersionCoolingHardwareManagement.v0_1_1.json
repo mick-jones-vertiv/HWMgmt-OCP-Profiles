@@ -35,43 +35,35 @@
           "Purpose": "To define the Control Loop for the Thermal resource",
           "PropertyRequirements": {
             "Differential": {
-              "ReadRequirement": "Recommended",
-              "WriteRequirement": "Recommended"
+              "ReadRequirement": "Recommended"
             },
             "Integral": {
-              "ReadRequirement": "Recommended",
-              "WriteRequirement": "Recommended"
+              "ReadRequirement": "Recommended"
             },
             "Proportional": {
-              "ReadRequirement": "Recommended",
-              "WriteRequirement": "Recommended"
+              "ReadRequirement": "Recommended"
             }
           }
         },
         "ControlType": {
           "Purpose": "Supported Control Types",
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "DeadBand": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "Description": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "Id": {},
         "Increment": {
           "ReadRequirement": "Recommended"
         },
         "Location": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "Name": {
           "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended",
           "Comparison": "AnyOf",
           "Values": [
             "Air temperature, In",
@@ -82,25 +74,18 @@
             "Water temperature, Differential"
           ]
         },
-        "Oem": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
-        },
         "OperatingMode": {},
         "PhysicalContext": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "PhysicalSubContext": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "Sensor": {
           "ReadRequirement": "Recommended"
         },
         "SetPoint": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "Mandatory"
+          "ReadRequirement": "Mandatory"
         },
         "SetPointRangeMax": {
           "ReadRequirement": "Recommended"
@@ -109,12 +94,10 @@
           "ReadRequirement": "Recommended"
         },
         "SetPointUnits": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "SetPointUpdateTime": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "Status": {
           "ReadRequirement": "Recommended"
@@ -160,28 +143,22 @@
           ]
         },
         "Description": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "Implementation": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "Location": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "Reading": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         },
         "ReadingTime": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         },
         "ReadingType": {
           "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None",
           "Comparison": "OneOf",
           "Values": [
             "Temperature",
@@ -193,7 +170,6 @@
         },
         "ReadingUnits": {
           "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None",
           "Comparison": "OneOf",
           "Values": [
             "Cel",
@@ -204,12 +180,10 @@
           ]
         },
         "Status": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         },
         "Thresholds": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         }
       }
     },
@@ -277,16 +251,13 @@
       "MinVersion": "1.0.0",
       "PropertyRequirements": {
         "CoolingLoops": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Recommended"
         },
         "RackCDUs": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Recommended"
         },
         "ImmersionUnits": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         }
       }
     },
@@ -310,20 +281,16 @@
       ],
       "PropertyRequirements": {
         "PowerLimitsWatts": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "PowerLoadPercent": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "PowerWatts": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         },
         "TemperatureCelsius": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         }
       }
     },
@@ -337,8 +304,7 @@
       ],
       "PropertyRequirements": {
         "TemperatureReadingsCelsius": {
-          "ReadRequirement": "Recommended",
-          "WriteRequirement": "Recommended"
+          "ReadRequirement": "Recommended"
         }
       }
     },
@@ -393,28 +359,22 @@
       "MinVersion": "1.13.0",
       "PropertyRequirements": {
         "AccountService": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         },
         "EventService": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         },
         "CoolingEquipment": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         },
         "Facilities": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         },
         "SessionService": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         },
         "Links": {
-          "ReadRequirement": "Mandatory",
-          "WriteRequirement": "None"
+          "ReadRequirement": "Mandatory"
         }
       }
     }
