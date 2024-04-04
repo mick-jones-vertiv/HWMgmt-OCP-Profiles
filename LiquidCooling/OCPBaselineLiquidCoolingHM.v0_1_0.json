@@ -23,7 +23,7 @@
                 "Manufacturer": {},
                 "Model": {},
                 "Name": {},
-                "PartNumber": {"ReadRequirement": "IfImplemented"},
+                "PartNumber": {"ReadRequirement": "Recommended"},
                 "PowerState": {},
                 "Sensors": {
                     "MinVersion": "1.8.1",
@@ -163,19 +163,19 @@
                     }
                 },
                 "CoolantConnectorRedundancy": {
-                    "ReadRequirement": "IfImplemented"
+                    "ReadRequirement": "Recommended"
                 },
                 "CoolingCapacityWatts": {
-                    "ReadRequirement": "IfImplemented"
+                    "ReadRequirement": "Recommended"
                 },
                 "EnvironmentMetrics": {},
                 "EquipmentType": {
                 },
                 "FilterRedundancy": {
-                    "ReadRequirement": "IfImplemented"
+                    "ReadRequirement": "Recommended"
                 },
                 "Filters": {},
-                "FirmwareVersion": {"ReadRequirement": "IfImplemented"},
+                "FirmwareVersion": {"ReadRequirement": "Recommended"},
                 "LeakDetection": {},
                 "Links": {
                     "PropertyRequirements": {
@@ -190,9 +190,9 @@
                 "Name": {},
                 "PartNumber": {},
                 "PrimaryCoolantConnectors": {},
-                "ProductionDate": {"ReadRequirement": "IfImplemented"},
+                "ProductionDate": {"ReadRequirement": "Recommended"},
                 "PumpRedundancy": {
-                    "ReadRequirement": "IfImplemented"
+                    "ReadRequirement": "Recommended"
                 },
                 "Pumps": {},
                 "SecondaryCoolantConnectors": {},
@@ -203,8 +203,8 @@
                         "State": {}
                     }
                 },
-                "UUID": {"ReadRequirement": "IfImplemented"},
-                "Version": {"ReadRequirement": "IfImplemented"},
+                "UUID": {"ReadRequirement": "Recommended"},
+                "Version": {"ReadRequirement": "Recommended"},
                 "AssetTag": {},
                 "CountryOfOrigin": {},
                 "UserLabel": {}
