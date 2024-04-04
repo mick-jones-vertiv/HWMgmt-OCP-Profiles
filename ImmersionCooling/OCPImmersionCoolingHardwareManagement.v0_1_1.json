@@ -120,7 +120,7 @@
       }
     },
     "Sensor": {
-      "MinVersion": "1.5.0",
+      "MinVersion": "1.8.1",
       "URIs": [
         "/redfish/v1/Chassis/{ChassisId}/Sensors/{SensorId}",
         "/redfish/v1/CoolingEquipment/RackCDUs/{CoolingUnitId}/Sensors/{SensorId}",
