@@ -25,7 +25,56 @@
                 "Name": {},
                 "PartNumber": {"ReadRequirement": "IfImplemented"},
                 "PowerState": {},
-                "Sensors": {},
+                "Sensors": {
+                    "MinVersion": "1.8.1",
+                    "MinCount": 2,
+                    "Purpose": "Required baseline FWS Sensors",
+                    "ReadRequirement": "Mandatory",
+                    "PropertyRequirements": {
+                      "Name": {
+                        "Comparison": "AnyOf",
+                        "Values": [
+                          "FWSCoolantSupplyTemp",
+                          "FWSCoolantReturnTemp"
+                        ]
+                      },
+                      "Description": {
+                        "ReadRequirement": "Recommended"
+                      },
+                      "Implementation": {
+                        "ReadRequirement": "Recommended"
+                      },
+                      "Location": {
+                        "ReadRequirement": "Recommended"
+                      },
+                      "Reading": {
+                        "ReadRequirement": "Mandatory"
+                      },
+                      "ReadingTime": {
+                        "ReadRequirement": "Mandatory"
+                      },
+                      "ReadingType": {
+                        "ReadRequirement": "Mandatory",
+                        "Comparison": "AnyOf",
+                        "Values": [
+                          "Temperature"
+                        ]
+                      },
+                      "ReadingUnits": {
+                        "ReadRequirement": "Mandatory",
+                        "Comparison": "AnyOf",
+                        "Values": [
+                          "Cel"
+                        ]
+                      },
+                      "Status": {
+                        "ReadRequirement": "Mandatory"
+                      },
+                      "Thresholds": {
+                        "ReadRequirement": "Recommended"
+                      }
+                    }
+                  },
                 "SerialNumber": {},
                 "Status": {
                     "PropertyRequirements": {
@@ -81,16 +130,16 @@
             ],
             "PropertyRequirements": {
                 "TemperatureReadingsCelsius": {
-                    "ReadRequirement": "IfImplemented"
+                    "ReadRequirement": "Recommended"
                 },
                 "TemperatureSummaryCelsius": {
-                    "ReadRequirement": "IfImplemented",
+                    "ReadRequirement": "Recommended",
                     "PropertyRequirements": {
                         "Ambient": {
-                            "ReadRequirement": "IfImplemented"
+                            "ReadRequirement": "Recommended"
                         },
                         "Internal": {
-                            "ReadRequirement": "IfImplemented"
+                            "ReadRequirement": "Recommended"
                         }
                     }
                 }
