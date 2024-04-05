@@ -25,56 +25,7 @@
                 "Name": {},
                 "PartNumber": {"ReadRequirement": "Recommended"},
                 "PowerState": {},
-                "Sensors": {
-                    "MinVersion": "1.8.1",
-                    "MinCount": 2,
-                    "Purpose": "Required baseline FWS Sensors",
-                    "ReadRequirement": "Mandatory",
-                    "PropertyRequirements": {
-                      "Name": {
-                        "Comparison": "AnyOf",
-                        "Values": [
-                          "FWSCoolantSupplyTemp",
-                          "FWSCoolantReturnTemp"
-                        ]
-                      },
-                      "Description": {
-                        "ReadRequirement": "Recommended"
-                      },
-                      "Implementation": {
-                        "ReadRequirement": "Recommended"
-                      },
-                      "Location": {
-                        "ReadRequirement": "Recommended"
-                      },
-                      "Reading": {
-                        "ReadRequirement": "Mandatory"
-                      },
-                      "ReadingTime": {
-                        "ReadRequirement": "Mandatory"
-                      },
-                      "ReadingType": {
-                        "ReadRequirement": "Mandatory",
-                        "Comparison": "AnyOf",
-                        "Values": [
-                          "Temperature"
-                        ]
-                      },
-                      "ReadingUnits": {
-                        "ReadRequirement": "Mandatory",
-                        "Comparison": "AnyOf",
-                        "Values": [
-                          "Cel"
-                        ]
-                      },
-                      "Status": {
-                        "ReadRequirement": "Mandatory"
-                      },
-                      "Thresholds": {
-                        "ReadRequirement": "Recommended"
-                      }
-                    }
-                  },
+                "Sensors": {},
                 "SerialNumber": {},
                 "Status": {
                     "PropertyRequirements": {
@@ -94,17 +45,12 @@
                 "/redfish/v1/Chassis/{ChassisId}/EnvironmentMetrics"
             ],
             "PropertyRequirements": {
+                "Purpose": "Chassis level summary of environment metrics",
                 "EnergykWh": {
                     "ReadRequirement": "Recommended"
                 },
                 "PowerWatts": {
                     "ReadRequirement": "Recommended"
-                },
-                "FWSCoolantSupplyTemp": {
-                    "ReadRequirement": "Mandatory"
-                },
-                "FWSCoolantReturnTemp": {
-                    "ReadRequirement": "Mandatory"
                 }
             }
         },
@@ -166,7 +112,8 @@
                     "ReadRequirement": "Recommended"
                 },
                 "CoolingCapacityWatts": {
-                    "ReadRequirement": "Recommended"
+                    "ReadRequirement": "Mandatory",
+                    "Purpose": "This is a required product capability"
                 },
                 "EnvironmentMetrics": {},
                 "EquipmentType": {
@@ -174,14 +121,17 @@
                 "FilterRedundancy": {
                     "ReadRequirement": "Recommended"
                 },
-                "Filters": {},
+                "Filters": {
+                    "ReadRequirement": "IfImplemented"
+                },
                 "FirmwareVersion": {"ReadRequirement": "Recommended"},
                 "LeakDetection": {},
                 "Links": {
                     "PropertyRequirements": {
                         "Chassis": {},
                         "ManagedBy": {
-                            "ReadRequirement": "IfImplemented"
+                            "Purpose": "Aligns with DMTF best practice; must have a manager for each device",
+                            "ReadRequirement": "Mandatory"
                         }
                     }
                 },
@@ -194,8 +144,13 @@
                 "PumpRedundancy": {
                     "ReadRequirement": "Recommended"
                 },
-                "Pumps": {},
-                "SecondaryCoolantConnectors": {},
+                "Pumps": {
+                    "ReadRequirement": "IfImplemented"
+                },
+                "SecondaryCoolantConnectors": {
+                    "Purpose": "Not required for a base LC profile",
+                    "ReadRequirement": "None"
+                },
                 "SerialNumber": {},
                 "Status": {
                     "PropertyRequirements": {
@@ -208,6 +163,33 @@
                 "AssetTag": {},
                 "CountryOfOrigin": {},
                 "UserLabel": {}
+            }
+        },
+        "CoolantConnector": {
+            "PropertyRequirements": {
+                "Coolant": {
+                    "PropertyRequirements": {
+                        "CoolantType": {},
+                        "DensityKgPerCubicMeter": {},
+                        "SpecificHeatkJoulesPerKgK": {}
+                    }
+                },
+                "CoolantConnectorType": {},
+                "Name": {},
+                "RatedFlowLitersPerMinute": {},
+                "SupplyTemperatureCelsius": {
+                    "PropertyRequirements": {
+                        "DataSourceUri": {},
+                        "Reading": {}
+                    }
+                },
+                "ReturnTemperatureCelsius": {
+                    "PropertyRequirements": {
+                        "DataSourceUri": {},
+                        "Reading": {}
+                    }
+                },
+                "Status": {}
             }
         },
         "LeakDetection": {
@@ -249,7 +231,7 @@
                                 "LocationType": {"ReadRequirement": "Recommended"},
                                 "Orientation": {"ReadRequirement": "Recommended"},
                                 "Reference": {"ReadRequirement": "Recommended"},
-                                "ServiceLabel": {"ReadRequirement": "Recommended"}
+                                "ServiceLabel": {"ReadRequirement": "Mandatory"}
                             }
                         }
                     }
