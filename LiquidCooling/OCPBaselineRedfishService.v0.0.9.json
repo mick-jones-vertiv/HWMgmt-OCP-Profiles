@@ -136,7 +136,8 @@
 			}
 		},
 		"Manager": {
-			"UseCases": [{
+			"UseCases": [
+                {
 				"UseCaseTitle": "The Manager providing Redfish service",
 				"UseCaseKeyProperty": "ManagerType",
 				"UseCaseComparison": "Equal",
